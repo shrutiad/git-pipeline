@@ -11,7 +11,7 @@ pipeline {
   stages {
       stage('GIT_Clone') {
         steps {
-        checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shrutiad/git-pipeline.git']]]
+        checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shrutiad/git-ec2.git']]]
            }
         }
         stage('Terraform_Setup') {
